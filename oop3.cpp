@@ -36,6 +36,7 @@ void CongPhanso(int tuso1, int mauso1, int tuso2, int mauso2, int &tusocuoi, int
     tusocuoi = tuso1 * mauso2 + tuso2 * mauso1;
     mausocuoi = mauso1 * mauso2;
     rutgon(tusocuoi, mausocuoi);
+    Xuat(tusocuoi, mausocuoi);
 }
 
 /*
@@ -47,6 +48,7 @@ void TruPhanso(int tuso1, int mauso1, int tuso2, int mauso2, int &tusocuoi, int 
     tusocuoi = tuso1 * mauso2 - tuso2 * mauso1;
     mausocuoi = mauso1 * mauso2;
     rutgon(tusocuoi, mausocuoi);
+    Xuat(tusocuoi, mausocuoi);
 }
 
 /*
@@ -58,6 +60,7 @@ void NhanPhanso(int tuso1, int mauso1, int tuso2, int mauso2, int &tusocuoi, int
     tusocuoi = tuso1 * tuso2;
     mausocuoi = mauso1 * mauso2;
     rutgon(tusocuoi, mausocuoi);
+    Xuat(tusocuoi, mausocuoi);
 }
 
 /*
@@ -73,6 +76,8 @@ void ChiaPhanso(int tuso1, int mauso1, int tuso2, int mauso2, int &tusocuoi, int
     tusocuoi = tuso1 * mauso2;
     mausocuoi = mauso1 * tuso2;
     rutgon(tusocuoi, mausocuoi);
+    Xuat(tusocuoi, mausocuoi);
+
 }
 
 /*
@@ -98,22 +103,17 @@ int main() {
 
     cout << "Tong: ";
     CongPhanso(tuso1, mauso1, tuso2, mauso2, tusocuoi, mausocuoi);
-    Xuat(tusocuoi, mausocuoi);
     cout<<"-----------------------" << endl;
 
     cout << "Hieu: ";
     TruPhanso(tuso1, mauso1, tuso2, mauso2, tusocuoi, mausocuoi);
-    Xuat(tusocuoi, mausocuoi);
     cout<<"-----------------------" << endl;
 
     cout << "Nhan: ";
     NhanPhanso(tuso1, mauso1, tuso2, mauso2, tusocuoi, mausocuoi);
-    Xuat(tusocuoi, mausocuoi);
     cout<<"-----------------------" << endl;
 
     cout << "Thuong: ";
     ChiaPhanso(tuso1, mauso1, tuso2, mauso2, tusocuoi, mausocuoi);
-    Xuat(tusocuoi, mausocuoi);
-
     return 0;
 }

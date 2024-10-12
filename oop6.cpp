@@ -24,15 +24,6 @@ void nhap()
     }
 }
 
-/*
-    Tìm vị trí xuất hiện a trong b
-    input: khong co
-    output: khong co
-    Thuật toán: Khi duyệt qua mảng B nếu phần từ nào mảng B \\
-    bằng phần tử đầu tiên của mảng A thì biến đếm mảng A tăng lên \\
-    nếu như biến đếm mảng A bằng độ dài mảng A thì mảng A xuât hiện trong mảng B \\
-    Cứ như thế duyệt qua hết mảng B
-*/
 void Xuly()
 {
     int i = 0, j = 0;
@@ -40,17 +31,20 @@ void Xuly()
     vector<int> res;
     for (int i = 0; i < nb; i++)
     {
-        if(b[i] == a[j])
+        if(b[i] == a[0])
         {
-            j++;
-        }
-        else
-        {
+            while(b[i] == a[j] && j < na)
+            {
+                i++;
+                j++;
+            }
+            i --;
+            if(j == na)
+            {
+                res.push_back(i - na + 1);
+                j = 0;
+            }
             j = 0;
-        }   
-        if(j == na)
-        {
-            res.push_back(i - na + 1);
         }
     }
     cout<<res.size()<<endl;

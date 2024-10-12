@@ -12,6 +12,10 @@ void rutgon(int &tuso, int &mauso) {
     mauso /= ucln;
 }
 
+void Xuat(int tuso, int mauso) {
+    cout << tuso << "/" << mauso << endl;
+}
+
 /*
     Goi ham nhap phan so
     input: tuso, mauso
@@ -85,9 +89,7 @@ void ChiaPhanso(int tuso1, int mauso1, int tuso2, int mauso2, int &tusocuoi, int
     input: tuso, mauso
     output: khong co
 */
-void Xuat(int tuso, int mauso) {
-    cout << tuso << "/" << mauso << endl;
-}
+
 
 int main() {
     int tuso1, mauso1, tuso2, mauso2;

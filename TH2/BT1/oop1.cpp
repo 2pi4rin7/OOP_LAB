@@ -1,4 +1,4 @@
-#include "diem.cpp"
+#include "diem.h"
 using namespace std;
 int main()
 {

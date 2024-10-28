@@ -1,6 +1,5 @@
 #pragma once
 #include "diem.h"
-
 class DaGiac{
     private: 
         Diem *dinh;

@@ -1,10 +1,10 @@
 #pragma once
 #include "diem.h"
-class Triangle{
+class TamGiac{
     private:
         Diem A, B, C;
     public:
-        Triangle();
+        TamGiac();
         void Nhap();
         void Xuat();
         void TinhTien(float x, float y);

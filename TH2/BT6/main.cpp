@@ -1,11 +1,11 @@
 #include <bits/stdc++.h>
-#include "triangle.h"
+#include "tamgiac.h"
 using namespace std;
 const float PI = 3.14;
 
 int main()
 {
-    Triangle t;
+    TamGiac t;
     t.Nhap();
     float goc, d;
     cin>>goc>>d;

@@ -1,5 +1,4 @@
 #pragma once
-
 class Diem{
     private:
         float iHoanh, iTung;

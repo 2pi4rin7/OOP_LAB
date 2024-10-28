@@ -10,7 +10,7 @@ class Diem{
         float GetTungDo();
         float GetHoanhDo();
         void SetTungDo(float Tung);
-        void SetHoangDo(float Hoanh);
+        void SetHoanhDo(float Hoanh);
         void TinhTien(float x, float y);
         void Quay(Diem tam, int goc);
         void PhongTo(float k);

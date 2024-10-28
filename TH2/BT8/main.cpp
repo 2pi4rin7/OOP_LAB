@@ -29,6 +29,7 @@ int main()
             cin>>x;
             a.pop(x);
         }
+        
     }
     return 0;
 }

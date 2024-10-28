@@ -13,7 +13,7 @@ void List::Erase(int index){
     for (unsigned int i = 0, j = 0; i < size; ++i) {
         if (i != index) {
             newData[j++] = data[i];
-        }
+        }   
     }
     delete[] data;
     data = newData;

@@ -1,4 +1,4 @@
-#include "diem.cpp"
+#include "diem.h"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -34,7 +34,7 @@ int main()
             case 2:
             {
                 a.SetTungDo(0);
-                a.SetHoangDo(0);
+                a.SetHoanhDo(0);
                 a.Xuat();
                 break;
             }

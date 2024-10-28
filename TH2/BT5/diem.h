@@ -8,7 +8,7 @@ class Diem{
         void Nhap();
         void Xuat();
         float GetTungDo();
-        float GetHoangDo();
+        float GetHoanhDo();
         void SetTungDo(float Tung);
         void SetHoangDo(float Hoanh);
         void TinhTien(float x, float y);

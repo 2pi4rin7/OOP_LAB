@@ -10,5 +10,5 @@ class ThiSinh{
         ThiSinh(const ThiSinh &x);
         void Nhap();
         void Xuat();
-        int Tong();
+        float Tong();
 };

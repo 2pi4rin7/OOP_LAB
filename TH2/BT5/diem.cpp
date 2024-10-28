@@ -31,13 +31,13 @@ void Diem::Xuat() {
 float Diem::GetTungDo() {
     return iTung;
 }
-float Diem::GetHoangDo() {
+float Diem::GetHoanhDo() {
     return iHoanh;
 }
 void Diem::SetTungDo(float Tung) {
     iTung = Tung;
 }
-void Diem::SetHoangDo(float Hoanh) {
+void Diem::SetHoanhDo(float Hoanh) {
     iHoanh = Hoanh;
 }
 void Diem::TinhTien(float x, float y) {

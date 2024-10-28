@@ -46,7 +46,7 @@ void ThiSinh::Xuat()
     cout << "Diem toan, van, anh: " << fToan << ", " << fVan << ", " << fAnh << endl;
 }
 
-int ThiSinh::Tong()
+float ThiSinh::Tong()
 {
     return fToan + fVan + fAnh;
 }

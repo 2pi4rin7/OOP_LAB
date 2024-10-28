@@ -17,9 +17,9 @@ Diem::Diem(const Diem& x) {
 }
 
 void Diem::Nhap() {
-    std::cout << "Nhap hoanh do: ";
+    //std::cout << "Nhap hoanh do: ";
     std::cin >> iHoanh;
-    std::cout << "Nhap tung do: ";
+    //std::cout << "Nhap tung do: ";
     std::cin >> iTung;
 }
 

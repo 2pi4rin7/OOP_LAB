@@ -8,7 +8,6 @@ class NgayThangNam{
         NgayThangNam();
         NgayThangNam(int Ngay, int Thang, int Nam);
         int TinhNgay();
-        NgayThangNam ConverttoDate(int SoNgay);
         NgayThangNam operator+(int Ngay);
         std::variant<NgayThangNam, std::string> operator-(int Ngay);
         NgayThangNam operator+(NgayThangNam ntn);

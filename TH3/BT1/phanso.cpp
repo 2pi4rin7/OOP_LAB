@@ -119,6 +119,11 @@ Output: ostream
 ostream& operator<<(ostream &os, const variant<PhanSo, double> &ps) {
     if (holds_alternative<PhanSo>(ps)) {
         PhanSo ps1 = get<PhanSo>(ps);
+        if(ps1.tu == 0)
+        {
+            os << 0;
+            return os;
+        } 
         os << ps1.tu << "/" << ps1.mau;
     } else {
         os << get<double>(ps);

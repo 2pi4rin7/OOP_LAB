@@ -8,13 +8,12 @@ class SoPhuc{
     public:
         SoPhuc();
         SoPhuc(double Thuc, double Ao);
-        SoPhuc(double Thuc);
         friend SoPhuc operator+(SoPhuc a, SoPhuc b);
         friend SoPhuc operator-(SoPhuc a, SoPhuc b);
         friend SoPhuc operator*(SoPhuc a, SoPhuc b);
         friend SoPhuc operator/(SoPhuc a, SoPhuc b);
         bool operator==(SoPhuc sp);
         bool operator!=(SoPhuc sp);
-        friend istream& operator>>(istream &is, SoPhuc sp);
+        friend istream& operator>>(istream &is, SoPhuc &sp);
         friend ostream& operator<<(ostream &os, SoPhuc sp);
 };

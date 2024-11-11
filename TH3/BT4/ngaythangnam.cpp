@@ -80,7 +80,7 @@ NgayThangNam NgayThangNam::operator+(int Ngay){
     return ConverttoDate(SoNgay);
 }
 
-NgayThangNam NgayThangNam::operator-(int Ngay){
+std::variant<NgayThangNam, std::string> NgayThangNam::operator-(int Ngay){
     int SoNgay = TinhNgay() - Ngay;
     return ConverttoDate(SoNgay);
 }
@@ -90,8 +90,10 @@ NgayThangNam NgayThangNam::operator+(NgayThangNam ntn){
     return ConverttoDate(SoNgay);
 }
 // Co loi o day
-NgayThangNam NgayThangNam::operator-(NgayThangNam ntn){
+std::variant<NgayThangNam, std::string> NgayThangNam::operator-(NgayThangNam ntn){
     int SoNgay = TinhNgay() - ntn.TinhNgay();
+    if(SoNgay < 0)
+        return "ERROR!!";
     return ConverttoDate(SoNgay);
 }
 
@@ -105,11 +107,11 @@ NgayThangNam NgayThangNam::operator++(int){
     return tmp;
 }
 
-NgayThangNam NgayThangNam::operator--(){
+std::variant<NgayThangNam, std::string> NgayThangNam::operator--(){
     return *this = ConverttoDate(this->TinhNgay() - 1);
 }
 
-NgayThangNam NgayThangNam::operator--(int){
+std::variant<NgayThangNam, std::string> NgayThangNam::operator--(int){
     NgayThangNam tmp = *this;
     *this = ConverttoDate(this->TinhNgay() - 1);
     return tmp;
@@ -148,3 +150,12 @@ std::ostream& operator<<(std::ostream &os, NgayThangNam ntn){
     os << ntn.Ngay << "/" << ntn.Thang << "/" << ntn.Nam;
     return os;
 }   
+
+std::ostream& operator<<(std::ostream &os, std::variant<NgayThangNam, std::string> ntn){
+    if (std::holds_alternative<NgayThangNam>(ntn)){
+        os << std::get<NgayThangNam>(ntn);
+    } else {
+        os << std::get<std::string>(ntn);
+    }
+    return os;
+}
